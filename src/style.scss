@@ -53,7 +53,8 @@ body {
   align-items: center;
   gap: 1rem;
   z-index: 5;
-  button {
+  button,
+  a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,6 +75,16 @@ body {
     svg {
     }
   }
+  hr{
+    width: 1px;
+    height: 20px;
+    background: #64748b;
+  }
+  a {
+    &:hover {
+      background: #cffafe;
+    }
+  }
 }
 
 #main {
@@ -90,7 +101,7 @@ body {
       background: #e2e8f0;
       border-radius: 10px;
       border: 1px solid #cbd5e1;
-      padding: .75rem;
+      padding: 0.75rem;
       display: flex;
       justify-content: space-between;
       gap: 1.5rem;
