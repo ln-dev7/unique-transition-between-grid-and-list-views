@@ -1,0 +1,127 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: #f8fafc;
+  padding-bottom: 6rem;
+}
+
+#app-mobile {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  h3 {
+    text-align: center;
+    font-weight: 400;
+  }
+  @media screen and (max-width: 780px) {
+    display: flex;
+  }
+}
+
+#app-desktop {
+  width: 100%;
+  max-width: 740px;
+  position: relative;
+  @media screen and (max-width: 780px) {
+    display: none;
+  }
+}
+
+.header {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  z-index: 5;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #64748b;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #64748b;
+    transition: 0.3s;
+    outline: none;
+    background: #fff;
+    &:hover,
+    &.active {
+      background: #e2e8f0;
+    }
+    svg {
+    }
+  }
+}
+
+#main {
+  position: relative;
+  width: 100%;
+  padding: 0 0.5rem 0 0.5rem;
+  .card {
+    position: absolute;
+    width: 240px;
+    height: 210px;
+    .content {
+      width: 100%;
+      height: 100%;
+      background: #e2e8f0;
+      border-radius: 10px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      .left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h3 {
+          color: #0f172a;
+          font-size: 16px;
+        }
+        span {
+          color: #334155;
+          font-size: 12px;
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        padding: 1.5rem 0 0 0;
+        button {
+          outline: none;
+          border: none;
+          padding: 0.125rem 0.5rem;
+          border-radius: 4px;
+          font-weight: 400;
+          background: #f1f5f9;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
